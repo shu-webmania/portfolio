@@ -106,7 +106,7 @@ table {
     background: #333;
     color: #fff;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 768px) {
     font-size: 2.6rem;
   }
 }
@@ -117,6 +117,10 @@ table {
   font-size: 1.8rem;
   @media screen and (max-width: 1200px) {
     font-size: 1.6rem;
+  }
+  @media screen and (max-width: 768px) {
+    text-align: left;
+    padding: 0 30px;
   }
 }
 /***************************************************************
@@ -209,7 +213,22 @@ main
     }
     &__right {
       width: 60%;
+      position: relative;
+      top: -47px;
       margin: 0 -80px 0 0;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    &__left {
+      nav {
+        ul {
+          li {
+            a {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
     }
   }
   @media screen and (max-width: 768px) {
@@ -228,6 +247,7 @@ main
         ul {
           li {
             a {
+              font-size: 1.6rem;
             }
           }
         }
@@ -238,9 +258,25 @@ main
       overflow: hidden;
       height: 200px;
       width: 100%;
+      top: 0;
       picture {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
         position: relative;
-        top: -120px;
+        top: -110%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 650px) {
+    &__right {
+      picture {
+        top: -70%;
       }
     }
   }
@@ -310,7 +346,8 @@ main
       flex-wrap: wrap;
     }
     &__left {
-      margin: 0;
+      max-width: 320px;
+      margin: 0 auto;
       width: 100%;
     }
     &__right {
@@ -330,9 +367,9 @@ main
   &__inner {
     max-width: 1320px;
     margin: 0 auto;
-    padding: 0 10px;
   }
   &__step {
+    padding: 0 10px;
     margin: 35px 0 0 0;
     display: flex;
     justify-content: space-between;
@@ -430,22 +467,36 @@ main
       }
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 768px) {
     &__step {
       flex-wrap: wrap;
       &__card {
+        &:first-of-type {
+          margin: 0 0 0 0;
+        }
+        margin: 10px 0 0 0;
+        padding: 18px 20px;
         width: 100%;
         &::before {
+          top: -8px;
+          transform: translateX(-50%) rotate(90deg);
+          left: 50%;
         }
         h3 {
+          padding: 0 0 0 60px;
           &::before {
+            font-size: 1.8rem;
           }
           .num {
+            top: 26px;
+            font-size: 4rem;
           }
           .tit {
+            font-size: 2.2rem;
           }
         }
         .txt {
+          margin: 15px 0 0 0;
         }
       }
     }
@@ -761,6 +812,75 @@ main
                 margin: 20px 0 0 0;
                 &::before {
                   left: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__content {
+      flex-wrap: wrap;
+      &:last-of-type {
+        margin: 50px 0 0 0;
+        .story__content__left {
+          order: 0;
+          padding: 0 30px;
+        }
+        .story__content__right {
+          margin: 0;
+        }
+      }
+      &__left {
+        width: 100%;
+        flex-direction: inherit;
+        padding: 0 30px;
+        &--img {
+          top: 0;
+          width: 48%;
+          margin: 10px 0 0 0;
+          &:last-of-type {
+            margin: 10px 0 0 0;
+          }
+        }
+      }
+      &__right {
+        width: 100%;
+        margin: 30px 0 0 0;
+        .content-tit {
+        }
+        .content-txt {
+        }
+        .point {
+          ul {
+            li {
+              &::before {
+              }
+            }
+          }
+        }
+        &__btn-box {
+          width: 100%;
+          &:last-of-type {
+            margin: 20px 0 0 0;
+          }
+          .box {
+            margin: 5px 0 0 0;
+            flex-direction: inherit;
+            justify-content: space-between;
+            .weak-btn {
+              width: 48%;
+              &:last-of-type {
+                margin: 0;
+              }
+            }
+            .good-btn {
+              width: 48%;
+              &:last-of-type {
+                margin: 0;
+                &::before {
                 }
               }
             }

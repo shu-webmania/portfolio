@@ -107,7 +107,7 @@ table {
   color: #fff;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .sec-tit {
     font-size: 2.6rem;
   }
@@ -123,6 +123,13 @@ table {
 @media screen and (max-width: 1200px) {
   .sec-txt {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sec-txt {
+    text-align: left;
+    padding: 0 30px;
   }
 }
 
@@ -240,7 +247,15 @@ main
   }
   .fv__right {
     width: 60%;
+    position: relative;
+    top: -47px;
     margin: 0 -80px 0 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .fv__left nav ul li a {
+    font-size: 1.4rem;
   }
 }
 
@@ -254,15 +269,33 @@ main
     padding: 95px 30px 100px;
     top: 0;
   }
+  .fv__left nav ul li a {
+    font-size: 1.6rem;
+  }
   .fv__right {
     margin: 0;
     overflow: hidden;
     height: 200px;
     width: 100%;
+    top: 0;
   }
   .fv__right picture {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
     position: relative;
-    top: -120px;
+    top: -110%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .fv__right picture {
+    top: -70%;
   }
 }
 
@@ -350,7 +383,8 @@ main
         flex-wrap: wrap;
   }
   .about__left {
-    margin: 0;
+    max-width: 320px;
+    margin: 0 auto;
     width: 100%;
   }
   .about__right {
@@ -366,10 +400,10 @@ main
 .description__inner {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 .description__step {
+  padding: 0 10px;
   margin: 35px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -488,13 +522,40 @@ main
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .description__step {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   .description__step__card {
+    margin: 10px 0 0 0;
+    padding: 18px 20px;
     width: 100%;
+  }
+  .description__step__card:first-of-type {
+    margin: 0 0 0 0;
+  }
+  .description__step__card::before {
+    top: -8px;
+    -webkit-transform: translateX(-50%) rotate(90deg);
+            transform: translateX(-50%) rotate(90deg);
+    left: 50%;
+  }
+  .description__step__card h3 {
+    padding: 0 0 0 60px;
+  }
+  .description__step__card h3::before {
+    font-size: 1.8rem;
+  }
+  .description__step__card h3 .num {
+    top: 26px;
+    font-size: 4rem;
+  }
+  .description__step__card h3 .tit {
+    font-size: 2.2rem;
+  }
+  .description__step__card .txt {
+    margin: 15px 0 0 0;
   }
 }
 
@@ -894,6 +955,73 @@ main
   }
   .story__content__right__btn-box .box .good-btn:last-of-type::before {
     left: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .story__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .story__content:last-of-type {
+    margin: 50px 0 0 0;
+  }
+  .story__content:last-of-type .story__content__left {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    padding: 0 30px;
+  }
+  .story__content:last-of-type .story__content__right {
+    margin: 0;
+  }
+  .story__content__left {
+    width: 100%;
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit;
+    padding: 0 30px;
+  }
+  .story__content__left--img {
+    top: 0;
+    width: 48%;
+    margin: 10px 0 0 0;
+  }
+  .story__content__left--img:last-of-type {
+    margin: 10px 0 0 0;
+  }
+  .story__content__right {
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
+  .story__content__right__btn-box {
+    width: 100%;
+  }
+  .story__content__right__btn-box:last-of-type {
+    margin: 20px 0 0 0;
+  }
+  .story__content__right__btn-box .box {
+    margin: 5px 0 0 0;
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .story__content__right__btn-box .box .weak-btn {
+    width: 48%;
+  }
+  .story__content__right__btn-box .box .weak-btn:last-of-type {
+    margin: 0;
+  }
+  .story__content__right__btn-box .box .good-btn {
+    width: 48%;
+  }
+  .story__content__right__btn-box .box .good-btn:last-of-type {
+    margin: 0;
   }
 }
 
