@@ -180,8 +180,10 @@ main
     width: 50%;
   }
   @media screen and (max-width: 1200px) {
+    max-width: 1200px;
+    overflow: hidden;
     &__left {
-      padding: 110px 30px;
+      padding: 150px 30px;
       width: 500px;
       top: -52px;
       &--tit {
@@ -206,6 +208,40 @@ main
       }
     }
     &__right {
+      width: 60%;
+      margin: 0 -80px 0 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 768px;
+    flex-wrap: wrap;
+    &__left {
+      padding: 95px 30px 100px;
+      top: 0;
+      &--tit {
+      }
+      &--catch {
+        .black-back {
+        }
+      }
+      nav {
+        ul {
+          li {
+            a {
+            }
+          }
+        }
+      }
+    }
+    &__right {
+      margin: 0;
+      overflow: hidden;
+      height: 200px;
+      width: 100%;
+      picture {
+        position: relative;
+        top: -120px;
+      }
     }
   }
 }
@@ -265,6 +301,26 @@ main
       }
       &--txt {
         font-size: 1.6rem;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__left {
+      margin: 0;
+      width: 100%;
+    }
+    &__right {
+      margin: 30px 0 0 0;
+      width: 100%;
+      &--tit {
+        .name {
+        }
+      }
+      &--txt {
       }
     }
   }
@@ -346,7 +402,7 @@ main
     }
   }
   @media screen and (max-width: 1200px) {
-    padding: 40px 0 0 0;
+    padding: 60px 0 0 0;
     &__step {
       margin: 25px 0 0 0;
       &__card {
@@ -370,6 +426,26 @@ main
         }
         .txt {
           margin: 18px 0 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    &__step {
+      flex-wrap: wrap;
+      &__card {
+        width: 100%;
+        &::before {
+        }
+        h3 {
+          &::before {
+          }
+          .num {
+          }
+          .tit {
+          }
+        }
+        .txt {
         }
       }
     }
@@ -625,24 +701,30 @@ main
     }
   }
   @media screen and (max-width: 1200px) {
-    padding: 40px 0 0 0;
+    padding: 60px 0 0 0;
     &__content {
       margin: 25px 0 0;
+      &:last-of-type {
+        margin: 20px 0 0 0;
+        .story__content__left {
+          padding: 0 30px 0 0;
+        }
+      }
       &__left {
         padding: 0 0 0 30px;
-        width: 46%;
+        width: 36%;
         flex-direction: column;
         align-items: center;
         &--img {
-          margin: 55px 0 0 0;
-          width: 100%;
+          margin: 20px 0 0 0;
+          width: 70%;
           &:last-of-type {
             margin: 30px 0 0 0;
           }
         }
       }
       &__right {
-        width: 70%;
+        width: 60%;
         height: 100%;
         padding: 30px;
         .content-tit {
@@ -664,8 +746,23 @@ main
         }
         &__btn-box {
           .box {
+            margin: 10px 0 0 0;
             flex-direction: column;
             a {
+            }
+            .weak-btn {
+              &:last-of-type {
+                margin: 10px 0 0 0;
+              }
+            }
+            .good-btn {
+              padding: 18px 39px;
+              &:last-of-type {
+                margin: 20px 0 0 0;
+                &::before {
+                  left: 10px;
+                }
+              }
             }
           }
         }
@@ -726,9 +823,13 @@ main
       font-size: 1.8rem;
       .content-tit {
         font-size: 2.3rem;
+        line-height: 1.4;
         font-family: $noto-fonts;
         padding: 0 0 0 15px;
         border-left: 10px solid #3ba759;
+        br {
+          display: none;
+        }
       }
       .txt {
         margin: 15px 0 0 0;
@@ -817,12 +918,56 @@ main
       }
     }
   }
+  @media screen and (max-width: 1200px) {
+    padding: 60px 0 0 0;
+    &__content {
+      &__inner {
+        padding: 60px 30px 0;
+      }
+      &__left {
+        width: 40%;
+      }
+      &__right {
+        width: 56%;
+        font-size: 1.6rem;
+        .content-tit {
+          font-size: 2.1rem;
+          br {
+            display: block;
+          }
+        }
+        .txt {
+          th {
+            width: 25%;
+          }
+        }
+        .app-box {
+          a {
+            padding: 10px 20px;
+            &:first-of-type {
+              width: 300px;
+            }
+            &:last-of-type {
+              width: 240px;
+              padding: 10px 10px 10px 45px;
+              font-size: 1.8rem;
+              margin: 0 0 0 10px;
+              &::before {
+                left: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .skills {
   padding: 80px 0 80px;
   &__inner {
-    max-width: 960px;
+    max-width: 1080px;
     margin: 0 auto;
+    padding: 0 60px;
   }
   &__content {
     font-size: 1.8rem;
@@ -845,6 +990,8 @@ main
     margin: 25px 0 0 0;
     font-size: 1.8rem;
     line-height: 2;
+  }
+  @media screen and (max-width: 1200px) {
   }
 }
 /***************************************************************
