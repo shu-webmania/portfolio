@@ -583,6 +583,7 @@ main
 }
 
 .story__content:last-of-type .story__content__left {
+  padding: 0 20px 0 0;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -800,7 +801,7 @@ main
 }
 
 .story__content__right__btn-box .box .good-btn {
-  padding: 18px 60px;
+  padding: 18px 51px;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff9833), to(#f56727));
   background: linear-gradient(#ff9833, #f56727);
   border-radius: 5px;
@@ -944,11 +945,18 @@ main
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .story__content__right__btn-box .box a {
+    font-size: 2rem;
+  }
+  .story__content__right__btn-box .box .weak-btn {
+    width: 100%;
+  }
   .story__content__right__btn-box .box .weak-btn:last-of-type {
     margin: 10px 0 0 0;
   }
   .story__content__right__btn-box .box .good-btn {
-    padding: 18px 39px;
+    width: 100%;
+    padding: 18px 33px;
   }
   .story__content__right__btn-box .box .good-btn:last-of-type {
     margin: 20px 0 0 0;
@@ -970,10 +978,10 @@ main
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-    padding: 0 30px;
+    padding: 0 10px;
   }
   .story__content:last-of-type .story__content__right {
-    margin: 0;
+    margin: 20px 0 0 0;
   }
   .story__content__left {
     width: 100%;
@@ -1011,13 +1019,18 @@ main
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .story__content__right__btn-box .box a {
+    font-size: 1.6rem;
+  }
   .story__content__right__btn-box .box .weak-btn {
+    padding: 15px 10px;
     width: 48%;
   }
   .story__content__right__btn-box .box .weak-btn:last-of-type {
     margin: 0;
   }
   .story__content__right__btn-box .box .good-btn {
+    padding: 15px 10px;
     width: 48%;
   }
   .story__content__right__btn-box .box .good-btn:last-of-type {
@@ -1261,6 +1274,20 @@ main
   }
   .works__content__right .app-box a:last-of-type::before {
     left: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .works__content__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .works__content__left {
+    width: 100%;
+  }
+  .works__content__right {
+    margin: 20px 0 0 0;
+    width: 100%;
   }
 }
 

@@ -513,6 +513,7 @@ main
     &:last-of-type {
       margin: 0;
       .story__content__left {
+        padding: 0 20px 0 0;
         order: 1;
         flex-direction: column;
         justify-content: center;
@@ -678,7 +679,7 @@ main
             }
           }
           .good-btn {
-            padding: 18px 60px;
+            padding: 18px 51px;
             background: linear-gradient(#ff9833, #f56727);
             border-radius: 5px;
             box-shadow: 0 5px 0 #a25a14;
@@ -800,14 +801,17 @@ main
             margin: 10px 0 0 0;
             flex-direction: column;
             a {
+              font-size: 2rem;
             }
             .weak-btn {
+              width: 100%;
               &:last-of-type {
                 margin: 10px 0 0 0;
               }
             }
             .good-btn {
-              padding: 18px 39px;
+              width: 100%;
+              padding: 18px 33px;
               &:last-of-type {
                 margin: 20px 0 0 0;
                 &::before {
@@ -827,10 +831,10 @@ main
         margin: 50px 0 0 0;
         .story__content__left {
           order: 0;
-          padding: 0 30px;
+          padding: 0 10px;
         }
         .story__content__right {
-          margin: 0;
+          margin: 20px 0 0 0;
         }
       }
       &__left {
@@ -849,18 +853,6 @@ main
       &__right {
         width: 100%;
         margin: 30px 0 0 0;
-        .content-tit {
-        }
-        .content-txt {
-        }
-        .point {
-          ul {
-            li {
-              &::before {
-              }
-            }
-          }
-        }
         &__btn-box {
           width: 100%;
           &:last-of-type {
@@ -870,13 +862,18 @@ main
             margin: 5px 0 0 0;
             flex-direction: inherit;
             justify-content: space-between;
+            a {
+              font-size: 1.6rem;
+            }
             .weak-btn {
+              padding: 15px 10px;
               width: 48%;
               &:last-of-type {
                 margin: 0;
               }
             }
             .good-btn {
+              padding: 15px 10px;
               width: 48%;
               &:last-of-type {
                 margin: 0;
@@ -1074,6 +1071,38 @@ main
               margin: 0 0 0 10px;
               &::before {
                 left: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__content {
+      &__inner {
+        flex-wrap: wrap;
+      }
+      &__left {
+        width: 100%;
+      }
+      &__right {
+        margin: 20px 0 0 0;
+        width: 100%;
+        .content-tit {
+          br {
+          }
+        }
+        .txt {
+          th {
+          }
+        }
+        .app-box {
+          a {
+            &:first-of-type {
+            }
+            &:last-of-type {
+              &::before {
               }
             }
           }
